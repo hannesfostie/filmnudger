@@ -1,6 +1,20 @@
 Filmnudger::Application.routes.draw do
   root to: 'reminders#new'
 
+  match 'login' => 'users#new', :as => :login
+  match 'logout' => 'users#destroy', :as => :logout
+
+  resources :users do
+    member do
+      get :choose_country
+    end
+  end
+  resources :reminders do
+    member do
+      get :save
+    end
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

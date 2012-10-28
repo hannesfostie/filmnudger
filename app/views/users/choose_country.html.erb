@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="wrap">
+    <%= form_for @user, id: 'settings', method: :put do |f| %>
+    <%= hidden_field_tag :tmdb_id, params[:tmdb_id] %>
+      <div class="field">
+        <%= f.label :country %>
+        <%= f.country_select :country %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Next" %>
+      </div>
+    <% end %>
+  </div>
+</div>

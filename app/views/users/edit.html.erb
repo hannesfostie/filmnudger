@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="wrap">
+    <%= form_for @user, id: 'settings', method: :put do |f| %>
+      <div class="field">
+        <%= f.label :country %>
+        <%= f.country_select :country %>
+      </div>
+      <div class="field">
+        <%= f.label :email %>
+        <%= f.text_field :email, nil, placeholder: 'Email' %>
+      </div>
+      <div class="field">
+        <%= f.label :password %>
+        <%= f.password_field :password, nil, placeholder: 'Password' %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Login" %>
+      </div>
+    <% end %>
+  </div>
+</div>

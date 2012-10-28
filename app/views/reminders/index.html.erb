@@ -1,0 +1,4 @@
+<%= current_user.email %>
+<% @reminders.each do |reminder| %>
+  title: <%= reminder.movie.title %>, tmdb_id: <%= reminder.movie.tmdb_id %><br />
+<% end %>

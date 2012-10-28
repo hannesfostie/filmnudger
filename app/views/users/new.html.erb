@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="wrap">
+    <%= form_tag users_path, id: 'login', method: :post do %>
+    <% if params[:tmdb_id] %>
+      <%= hidden_field_tag :tmdb_id, params[:tmdb_id] %>
+    <% end %>
+      <div class="field">
+        <%= label_tag :email %>
+        <%= text_field_tag :email, nil, placeholder: 'Email' %>
+      </div>
+      <div class="field">
+        <%= label_tag :password %>
+        <%= password_field_tag :password, nil, placeholder: 'Password' %>
+      </div>
+      <div class="actions">
+        <%= submit_tag "Login" %>
+      </div>
+    <% end %>
+  </div>
+</div>
