@@ -39,7 +39,6 @@ end
 # gem 'debugger'
 
 gem "capybara", :group => [:development, :test]
-gem "devise"
 gem "haml", ">= 3.0.0"
 gem "haml-rails"
 gem "jquery-rails"
