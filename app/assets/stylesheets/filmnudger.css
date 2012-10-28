@@ -1,0 +1,7 @@
+.movie-title { font-size: 1.2em; padding-bottom: 15px; }
+.select2-highlighted .movie-synopsis { font-size: .8em; color: #eee; }
+
+.wrap {
+  max-width: 650px;
+  margin: 0 auto;
+}

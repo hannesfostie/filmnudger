@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="wrap">
+
+    <h1>Filmnudger reminds you when your favorite movies are released in theaters.</h1>
+    <h2>Choose a movie below</h2>
+
+    <%= form_tag do %>
+      <%= hidden_field_tag :movie_select, nil, { style: 'width:100%;' } %>
+      <br />
+      <%= submit_tag 'next' %>
+    <% end %>
+
+  </div>
+</div>
