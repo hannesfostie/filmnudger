@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :password, :country
-
+  authenticates_with_sorcery!
+  # attr_accessible :title, :body
   iso_country :country
 end
