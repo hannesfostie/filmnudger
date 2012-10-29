@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:openminds/iso_countries.git
+  remote: git://github.com/openminds/iso_countries.git
   revision: 878d7fe688324cb9e05615dedfc9c6edb8166c69
   specs:
     iso_countries (0.2)
