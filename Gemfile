@@ -11,7 +11,6 @@ gem 'delayed_job_active_record'
 gem 'rest-client'
 gem 'daemons'
 gem 'chronic'
-gem 'mandrill-api'
 
 # Gems used only for assets and not required
 # in production environments by default.
