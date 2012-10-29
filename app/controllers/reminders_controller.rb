@@ -16,7 +16,10 @@ class RemindersController < ApplicationController
   end
 
   def save
-    movie = Movie.find_or_create_by_tmdb_id(tmdb_id: params[:tmdb_id], title: 'temp title')
+    movie = Movie.find_or_initialize_by_tmdb_id(tmdb_id: params[:tmdb_id])
+    if movie.new_record?
+      movie.update_info
+    end
     @reminder = Reminder.new(user_id: current_user.id, movie_id: movie.id)
     if @reminder.save
       flash[:notice] = "We'll email you when your movie is released in theaters!"
