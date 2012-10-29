@@ -65,6 +65,9 @@ module Filmnudger
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
+    # dont launch db when precompiling and deploying to heroku
+    config.assets.initialize_on_precompile = false
+
     config.action_mailer.smtp_settings = {
       :address   => "smtp.mandrillapp.com",
       :port      => 25,
