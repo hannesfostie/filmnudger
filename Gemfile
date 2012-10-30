@@ -7,7 +7,6 @@ gem 'iso_countries', :git => 'git://github.com/openminds/iso_countries.git'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-gem 'delayed_job_active_record'
 gem 'rest-client'
 gem 'daemons'
 gem 'chronic'
