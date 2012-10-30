@@ -5,7 +5,7 @@ namespace :movie_releases do
       movie = release.movie
       users = movie.reminders.collect{|r| r.user}
       users.each do |user|
-        MovieRelease.movie_release(user, movie).delay.deliver
+        ReleaseMailer.delay.movie_release(user, movie)
       end
     end
   end
