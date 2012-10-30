@@ -1,14 +1,9 @@
-<div class="container">
-  <div class="wrap">
+<% content_for :header do %>
+  <h1>Reminders for theatrical movie releases.</h1>
+  <h2>Because forgetting about your favorite releases sucks.</h2>
+<% end %>
 
-    <h1>Filmnudger reminds you when your favorite movies are released in theaters.</h1>
-    <h2>Choose a movie below</h2>
-
-    <%= form_for @reminder do |f| %>
-      <%= hidden_field_tag :tmdb_id, nil, { style: 'width:100%;', class: 'movie_select' } %>
-      <br />
-      <%= f.submit 'next' %>
-    <% end %>
-
-  </div>
-</div>
+<%= form_for @reminder do |f| %>
+  <%= hidden_field_tag :tmdb_id, nil, { style: 'width:100%;', class: 'movie_select' } %>
+  <%= f.submit 'Send me a reminder', class: 'btn' %>
+<% end %>

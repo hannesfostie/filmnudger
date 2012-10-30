@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Filmnudger</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Filmnudger</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="wrap">
+        <span class="brand">
+          <a href="#">Filmnudger</a>
+        </span>
+        <span class="credits">
+          made by <a href="http://twitter.com/hannesfostie">@hannesfostie</a>
+        </span>
+      </div>
+    </div>
 
-<% if flash[:alert] %>
-  <div class="flash alert">
-    <%= flash[:alert] %>
-  </div>
-<% end %>
+    <div class="header">
+      <div class="wrap">
+        <%= yield :header %>
+      </div>
+    </div>
 
-<% if flash[:notice] %>
-  <div class="flash notice">
-    <%= flash[:notice] %>
-  </div>
-<% end %>
+    <div class="flashes">
+      <div class="wrap">
+        <% if flash[:alert] %>
+          <div class="flash alert">
+            <%= flash[:alert] %>
+          </div>
+        <% end %>
 
-<%= yield %>
+        <% if flash[:notice] %>
+          <div class="flash notice">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
+      </div>
+    </div>
 
-</body>
+    <div class="container">
+      <div class="wrap">
+        <%= yield %>
+      </div>
+    </div>
+
+  </body>
 </html>
